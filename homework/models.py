@@ -18,11 +18,8 @@ class Product:
         TODO Верните True если количество продукта больше или равно запрашиваемому
             и False в обратном случае
         """
-        if quantity >= Product.quantity:
-            return True
-        else:
-            return False
-        #raise NotImplementedError
+        return self.quantity >= quantity
+
 
     def buy(self, quantity):
         """
