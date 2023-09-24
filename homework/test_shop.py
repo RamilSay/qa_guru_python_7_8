@@ -19,7 +19,7 @@ class TestProducts:
 
     def test_product_check_quantity(self, product):
         # TODO напишите проверки на метод check_quantity
-        assert Product.quantity == Product.check_quantity(self)
+        assert product.quantity == product.check_quantity(quantity=1000)
 
     def test_product_buy(self, product):
         # TODO напишите проверки на метод buy
