@@ -23,7 +23,7 @@ class TestProducts:
 
     def test_product_buy(self, product):
         # TODO напишите проверки на метод buy
-        pass
+        assert
 
     def test_product_buy_more_than_available(self, product):
         # TODO напишите проверки на метод buy,
