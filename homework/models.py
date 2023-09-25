@@ -34,7 +34,7 @@ class Product:
             self.quantity -= quantity
             print('Покупка совершена')
         else:
-            raise ValueError
+            raise ValueError(f'Недостаточно количества {self.name} для покупки')
 
     def __hash__(self):
         return hash(self.name + self.description)
