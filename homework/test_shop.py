@@ -23,8 +23,9 @@ class TestProducts:
 
     def test_product_buy(self, product):
         # TODO напишите проверки на метод buy
-        quantity = book.quantity
-        assert product.buy(self)
+        quantity = product.quantity
+        product.buy(100)
+        assert product.quantity == quantity - 100
 
     def test_product_buy_more_than_available(self, product):
         # TODO напишите проверки на метод buy,
