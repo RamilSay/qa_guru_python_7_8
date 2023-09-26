@@ -30,7 +30,8 @@ class TestProducts:
     def test_product_buy_more_than_available(self, product):
         # TODO напишите проверки на метод buy,
         #  которые ожидают ошибку ValueError при попытке купить больше, чем есть в наличии
-        pass
+        quantity = product.quantity
+        product.buy(1500)
 
 
 class TestCart:
