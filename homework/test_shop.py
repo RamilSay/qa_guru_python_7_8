@@ -32,6 +32,7 @@ class TestProducts:
         #  которые ожидают ошибку ValueError при попытке купить больше, чем есть в наличии
         quantity = product.quantity
         product.buy(1500)
+        assert product.quantity != quantity
 
 
 class TestCart:
