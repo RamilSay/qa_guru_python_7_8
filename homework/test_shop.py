@@ -32,9 +32,7 @@ class TestProducts:
         #  которые ожидают ошибку ValueError при попытке купить больше, чем есть в наличии
         with pytest.raises(ValueError):
             product.buy(1100)
-        #quantity = product.quantity
-        #product.buy(1500)
-        #assert product.quantity == quantity, ValueError
+
 
 
 class TestCart:
