@@ -34,7 +34,6 @@ class TestProducts:
             product.buy(1100)
 
 
-
 class TestCart:
     """
     TODO Напишите тесты на методы класса Cart
