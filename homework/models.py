@@ -59,7 +59,7 @@ class Cart:
         Если продукт уже есть в корзине, то увеличиваем количество
         """
         self.products[product] = self.products.get(product,0) + buy_count
-        raise NotImplementedError
+
 
     def remove_product(self, product: Product, remove_count=None):
         """
