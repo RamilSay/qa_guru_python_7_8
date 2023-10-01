@@ -52,3 +52,4 @@ class TestCart:
         assert product in cart.products
         cart.add_product(product, buy_count=4)
         assert cart.products.get(product) == 5
+        assert cart.products.__len__() == 1
