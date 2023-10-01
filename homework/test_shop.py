@@ -50,3 +50,5 @@ class TestCart:
     def test_cart_add_product(self, product, cart):
         cart.add_product(product)
         assert product in cart.products
+        cart.add_product(product, buy_count=4)
+        assert cart.products.get(product) == 5
