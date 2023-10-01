@@ -41,3 +41,7 @@ class TestCart:
         На некоторые методы у вас может быть несколько тестов.
         Например, негативные тесты, ожидающие ошибку (используйте pytest.raises, чтобы проверить это)
     """
+
+    def test_cart_add_product(self, product, cart):
+        cart.add_product(product, buy_count=10)
+        assert
