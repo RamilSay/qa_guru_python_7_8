@@ -3,12 +3,17 @@
 """
 import pytest
 
-from homework.models import Product
+from homework.models import Product, Cart
 
 
 @pytest.fixture
 def product():
     return Product("book", 100, "This is a book", 1000)
+
+
+@pytest.fixture
+def cart():
+    return Cart()
 
 
 class TestProducts:
@@ -43,5 +48,5 @@ class TestCart:
     """
 
     def test_cart_add_product(self, product, cart):
-        cart.add_product(product, buy_count=10)
-        assert
+        cart.add_product(product)
+        assert product in cart.products
