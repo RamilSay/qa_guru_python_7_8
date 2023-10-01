@@ -69,6 +69,8 @@ class Cart:
         """
         if remove_count is None or remove_count >= self.products.get(product):
             self.products.pop(product)
+        else:
+            raise ValueError('Такого продукта нет в корзине')
 
     def clear(self):
         raise NotImplementedError
