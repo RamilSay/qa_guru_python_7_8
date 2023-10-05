@@ -53,3 +53,8 @@ class TestCart:
         cart.add_product(product, buy_count=4)
         assert cart.products.get(product) == 5
         assert cart.products.__len__() == 1
+
+    def test_remove_product(self, product, cart):
+        cart.add_product(product, 100)
+        cart.remove_product(product, 50)
+        assert cart.products.get(product) == 50

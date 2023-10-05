@@ -23,7 +23,6 @@ class Product:
         """
         return self.quantity >= quantity
 
-
     def buy(self, quantity):
         """
         TODO реализуйте метод покупки
@@ -59,7 +58,6 @@ class Cart:
         Если продукт уже есть в корзине, то увеличиваем количество
         """
         self.products[product] = self.products.get(product, 0) + buy_count
-
 
     def remove_product(self, product: Product, remove_count=None):
         """
