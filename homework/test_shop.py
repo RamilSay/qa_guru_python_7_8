@@ -56,5 +56,5 @@ class TestCart:
 
     def test_remove_product(self, product, cart):
         cart.add_product(product, 100)
-        cart.remove_product(product, 50)
-        assert cart.products.get(product) == 50
+        cart.remove_product(product, 100)
+        assert product not in cart.products
