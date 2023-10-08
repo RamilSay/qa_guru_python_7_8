@@ -71,7 +71,7 @@ class Cart:
             raise ValueError('Такого продукта нет в корзине')
 
     def clear(self):
-        raise NotImplementedError
+        self.products.clear()
 
     def get_total_price(self) -> float:
         raise NotImplementedError
