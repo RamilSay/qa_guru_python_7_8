@@ -72,3 +72,7 @@ class TestCart:
         cart.add_product(product, 10)
         cart.clear()
         assert cart.products == {}
+
+    def test_get_total_price(self, product, cart):
+        cart.add_product(product, 10)
+        assert cart.get_total_price() == 1000
