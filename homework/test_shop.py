@@ -62,7 +62,7 @@ class TestCart:
     def test_remove_product_count_more(self, product, cart):
         cart.add_product(product, 2)
         cart.remove_product(product, 5)
-        assert product not in cart.products
+        assert cart.products == {}
 
     def test_remove_product_from_empty_cart(self, product, cart):
         with pytest.raises(KeyError):
