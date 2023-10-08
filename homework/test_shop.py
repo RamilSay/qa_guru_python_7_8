@@ -83,6 +83,7 @@ class TestCart:
     def test_buy_enough_quantity(self, product, cart):
         cart.add_product(product, 100)
         cart.buy()
+        assert cart.products == {}
         assert product.quantity == 900
 
     def test_buy_more_than_stock(self, product, cart):

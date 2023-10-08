@@ -31,7 +31,7 @@ class Product:
         """
         if self.check_quantity(quantity):
             self.quantity -= quantity
-            print('Покупка совершена')
+            print(' Покупка совершена')
         else:
             raise ValueError(f'Недостаточно количества {self.name} для покупки')
 
