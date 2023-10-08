@@ -77,6 +77,9 @@ class TestCart:
         cart.add_product(product, 10)
         assert cart.get_total_price() == product.price * 10
 
+        cart.add_product(product, 5)
+        assert cart.get_total_price() == product.price * 15
+
     def test_buy_enough_quantity(self, product, cart):
         cart.add_product(product, 100)
         cart.buy()
