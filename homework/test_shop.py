@@ -59,6 +59,11 @@ class TestCart:
         cart.remove_product(product, 100)
         assert product not in cart.products
 
+    def test_remove_product_count_less(self, product, cart):
+        cart.add_product(product, 5)
+        cart.remove_product(product, 2)
+        assert cart.products[product] == 3
+
     def test_remove_product_count_more(self, product, cart):
         cart.add_product(product, 2)
         cart.remove_product(product, 5)

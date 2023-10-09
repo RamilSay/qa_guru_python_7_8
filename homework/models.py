@@ -65,8 +65,11 @@ class Cart:
         Если remove_count не передан, то удаляется вся позиция
         Если remove_count больше, чем количество продуктов в позиции, то удаляется вся позиция
         """
-        if remove_count is None or remove_count >= self.products.get(product):
-            self.products.pop(product)
+        if product in self.products:
+            if remove_count is None or remove_count >= self.products.get(product):
+                self.products.pop(product)
+            else:
+                self.products[product] -= remove_count
         else:
             raise ValueError('Такого продукта нет в корзине')
 
