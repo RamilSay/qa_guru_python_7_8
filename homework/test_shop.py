@@ -75,7 +75,7 @@ class TestCart:
         assert cart.products == {}
 
     def test_remove_product_from_empty_cart(self, product, cart):
-        with pytest.raises(KeyError):
+        with pytest.raises(ValueError):
             cart.remove_product(product)
 
     def test_clear_cart(self, product, cart):
